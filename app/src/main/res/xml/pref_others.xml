@@ -1,0 +1,13 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="others_red_dot"
+        android:title="@string/pref_title_red_dot" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="others_new_log"
+        android:title="@string/pref_title_new_log" />
+
+</PreferenceScreen>

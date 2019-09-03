@@ -1,0 +1,61 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it. -->
+    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+    <!--suppress AndroidDomInspection -->
+    <ListPreference
+        android:defaultValue="P0"
+        android:entries="@array/pref_participant_list_titles"
+        android:entryValues="@array/pref_participant_list_values"
+        android:key="participant_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_participant_code" />
+
+    <ListPreference
+        android:defaultValue="S0"
+        android:entries="@array/pref_session_list_titles"
+        android:entryValues="@array/pref_session_list_values"
+        android:key="session_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_session_code" />
+
+    <ListPreference
+        android:defaultValue="G0"
+        android:entries="@array/pref_group_list_titles"
+        android:entryValues="@array/pref_group_list_values"
+        android:key="group_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_group_code" />
+
+    <ListPreference
+        android:defaultValue="C0"
+        android:entries="@array/pref_condition_list_titles"
+        android:entryValues="@array/pref_condition_list_values"
+        android:key="condition_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_condition_code" />
+
+    <ListPreference
+        android:defaultValue="3"
+        android:entries="@array/pref_num_phrases_list_titles"
+        android:entryValues="@array/pref_num_phrases_list_values"
+        android:key="num_phrases_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_num_phrases_code" />
+
+    <ListPreference
+        android:defaultValue="enron_mobile"
+        android:entries="@array/pref_phrases_file_list_titles"
+        android:entryValues="@array/pref_phrases_file_list_values"
+        android:key="phrases_file_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_phrases_file_code" />
+
+
+</PreferenceScreen>

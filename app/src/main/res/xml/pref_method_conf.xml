@@ -1,0 +1,69 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- A 'parent' preference, which enables/disables child preferences (below)
+         when checked/unchecked. -->
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="method_conf_char_bold"
+        android:title="@string/pref_title_bold_on_char_prediction" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="method_conf_char_italic"
+        android:title="@string/pref_title_italic_on_char_prediction" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="method_conf_char_size"
+        android:title="@string/pref_title_size_on_char_prediction" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="method_conf_char_color"
+        android:title="@string/pref_title_color_on_char_prediction" />
+
+    <ListPreference
+        android:defaultValue="5"
+        android:entries="@array/method_conf_n_of_chars_titles"
+        android:entryValues="@array/method_conf_n_of_chars_values"
+        android:key="method_conf_n_of_chars"
+        android:title="@string/method_conf_n_of_chars" />
+
+    <ListPreference
+        android:defaultValue="0.15"
+        android:entries="@array/method_conf_predict_threshold_titles"
+        android:entryValues="@array/method_conf_predict_threshold_values"
+        android:key="method_conf_predict_threshold"
+        android:title="@string/method_conf_predict_threshold" />
+
+    <ListPreference android:defaultValue="0.30"
+        android:entries="@array/method_conf_predict_threshold_titles"
+        android:entryValues="@array/method_conf_predict_threshold_values"
+        android:key="method_conf_word_predict_threshold"
+        android:title="@string/method_conf_word_predict_threshold" />
+
+    <ListPreference
+        android:defaultValue="DECODED"
+        android:entries="@array/method_conf_char_display_titles"
+        android:entryValues="@array/method_conf_char_display_values"
+        android:key="method_conf_char_display"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/method_conf_char_display" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="method_conf_word_prediction"
+        android:title="@string/method_conf_word_prediction" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="method_conf_back_key"
+        android:title="@string/method_conf_back_key" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="method_conf_suggestion_bar"
+        android:title="@string/method_conf_suggestion_bar" />
+
+</PreferenceScreen>

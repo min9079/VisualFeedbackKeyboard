@@ -1,0 +1,289 @@
+<resources>
+    <string name="app_name">Custom Keyboard</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example Experiment settings -->
+    <string name="pref_header_experiment">Experiment</string>
+
+    <string name="pref_title_participant_code">Participant Code</string>
+    <string-array name="pref_participant_list_titles">
+        <item>P0</item>
+        <item>P1</item>
+        <item>P2</item>
+        <item>P3</item>
+        <item>P4</item>
+        <item>P5</item>
+        <item>P6</item>
+        <item>P7</item>
+        <item>P8</item>
+        <item>P9</item>
+        <item>P10</item>
+        <item>P11</item>
+        <item>P12</item>
+        <item>P13</item>
+        <item>P14</item>
+        <item>P15</item>
+        <item>P16</item>
+        <item>P17</item>
+        <item>P18</item>
+        <item>P19</item>
+        <item>P20</item>
+        <item>P21</item>
+        <item>P22</item>
+        <item>P23</item>
+        <item>P24</item>
+        <item>P25</item>
+        <item>P26</item>
+        <item>P27</item>
+        <item>P28</item>
+        <item>P29</item>
+        <item>P30</item>
+    </string-array>
+    <string-array name="pref_participant_list_values">
+        <item>P0</item>
+        <item>P1</item>
+        <item>P2</item>
+        <item>P3</item>
+        <item>P4</item>
+        <item>P5</item>
+        <item>P6</item>
+        <item>P7</item>
+        <item>P8</item>
+        <item>P9</item>
+        <item>P10</item>
+        <item>P11</item>
+        <item>P12</item>
+        <item>P13</item>
+        <item>P14</item>
+        <item>P15</item>
+        <item>P16</item>
+        <item>P17</item>
+        <item>P18</item>
+        <item>P19</item>
+        <item>P20</item>
+        <item>P21</item>
+        <item>P22</item>
+        <item>P23</item>
+        <item>P24</item>
+        <item>P25</item>
+        <item>P26</item>
+        <item>P27</item>
+        <item>P28</item>
+        <item>P29</item>
+        <item>P30</item>
+    </string-array>
+
+    <string name="pref_title_session_code">Session Code</string>
+    <string-array name="pref_session_list_titles">
+        <item>S0</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+        <item>S4</item>
+        <item>S5</item>
+        <item>S6</item>
+        <item>S7</item>
+        <item>S8</item>
+        <item>S9</item>
+        <item>S10</item>
+        <item>S11</item>
+        <item>S12</item>
+        <item>S13</item>
+        <item>S14</item>
+        <item>S15</item>
+        <item>S16</item>
+        <item>S17</item>
+    </string-array>
+    <string-array name="pref_session_list_values">
+        <item>S0</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+        <item>S4</item>
+        <item>S5</item>
+        <item>S6</item>
+        <item>S7</item>
+        <item>S8</item>
+        <item>S9</item>
+        <item>S10</item>
+        <item>S11</item>
+        <item>S12</item>
+        <item>S13</item>
+        <item>S14</item>
+        <item>S15</item>
+        <item>S16</item>
+        <item>S17</item>
+    </string-array>
+
+    <string name="pref_title_group_code">Group Code</string>
+    <string-array name="pref_group_list_titles">
+        <item>G0</item>
+        <item>G1</item>
+        <item>G2</item>
+        <item>G3</item>
+        <item>G4</item>
+        <item>G5</item>
+        <item>G6</item>
+        <item>G7</item>
+    </string-array>
+    <string-array name="pref_group_list_values">
+        <item>G0</item>
+        <item>G1</item>
+        <item>G2</item>
+        <item>G3</item>
+        <item>G4</item>
+        <item>G5</item>
+        <item>G6</item>
+        <item>G7</item>
+    </string-array>
+
+    <string name="pref_title_condition_code">Condition Code</string>
+    <string-array name="pref_condition_list_titles">
+        <item>C0</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+        <item>C4</item>
+        <item>C5</item>
+        <item>C6</item>
+        <item>C7</item>
+    </string-array>
+    <string-array name="pref_condition_list_values">
+        <item>C0</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+        <item>C4</item>
+        <item>C5</item>
+        <item>C6</item>
+        <item>C7</item>
+    </string-array>
+
+    <string name="pref_title_num_phrases_code">Phrases per Block</string>
+    <string-array name="pref_num_phrases_list_titles">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="pref_num_phrases_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="pref_title_phrases_file_code">Phrases File</string>
+    <string-array name="pref_phrases_file_list_titles">
+        <item>ENRON_MOBILE200</item>
+        <item>MACKENZIE2</item>
+        <item>MACKENZIE100</item>
+        <item>tweets</item>
+    </string-array>
+    <string-array name="pref_phrases_file_list_values">
+        <item>enron_mobile</item>
+        <item>phrases2</item>
+        <item>phrases100</item>
+        <item>tweets</item>
+    </string-array>
+
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_others">Others</string>
+
+    <string name="pref_title_red_dot">Red Dot Drawing for debug</string>
+
+    <string name="pref_title_new_log">Make new log when test starting.</string>
+
+    <!-- Example settings for Method Configurations -->
+    <string name="pref_header_method_conf">Method Configuration</string>
+
+    <string name="pref_title_bold_on_char_prediction">Bold on Character Prediction</string>
+
+    <string name="pref_title_italic_on_char_prediction">Italic on Character Prediction</string>
+
+    <string name="pref_title_size_on_char_prediction">Size on Character Prediction</string>
+
+    <string name="pref_title_color_on_char_prediction">Color on Character Prediction</string>
+
+    <string name="method_conf_n_of_chars">(Max) Number of Chars for Prediction</string>
+    <string-array name="method_conf_n_of_chars_titles">
+        <item>1 chars</item>
+        <item>3 chars</item>
+        <item>5 chars</item>
+    </string-array>
+    <string-array name="method_conf_n_of_chars_values">
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+    <string name="method_conf_predict_threshold">Character Prediction Threshold Prob.</string>
+    <string name="method_conf_word_predict_threshold">Word Prediction Threshold Prob.</string>
+    <string-array name="method_conf_predict_threshold_titles">
+        <item>0.01</item>
+        <item>0.05</item>
+        <item>0.10</item>
+        <item>0.15</item>
+        <item>0.20</item>
+        <item>0.25</item>
+        <item>0.30</item>
+        <item>0.35</item>
+        <item>0.40</item>
+        <item>0.45</item>
+        <item>0.50</item>
+        <item>0.55</item>
+        <item>0.60</item>
+        <item>0.65</item>
+        <item>0.70</item>
+    </string-array>
+    <string-array name="method_conf_predict_threshold_values">
+        <item>0.01</item>
+        <item>0.05</item>
+        <item>0.10</item>
+        <item>0.15</item>
+        <item>0.20</item>
+        <item>0.25</item>
+        <item>0.30</item>
+        <item>0.35</item>
+        <item>0.40</item>
+        <item>0.45</item>
+        <item>0.50</item>
+        <item>0.55</item>
+        <item>0.60</item>
+        <item>0.65</item>
+        <item>0.70</item>
+    </string-array>
+    <string name="method_conf_char_display">Character Display Method</string>
+    <string-array name="method_conf_char_display_titles">
+        <item>DECODED</item>
+        <item>STAR</item>
+        <item>GRAY</item>
+        <item>ORIGINAL</item>
+    </string-array>
+    <string-array name="method_conf_char_display_values">
+        <item>DECODED</item>
+        <item>STAR</item>
+        <item>GRAY</item>
+        <item>ORIGINAL</item>
+    </string-array>
+    <string name="method_conf_word_prediction">On/off Word Prediction</string>
+    <string name="method_conf_back_key">Back key support</string>
+    <string name="method_conf_suggestion_bar">Suggestion bar support</string>
+    <string name="title_activity_wear_main">CustomKeyboard</string>
+    <string name="hello_round">Tiny Text Entry Experiment</string>
+
+</resources>
