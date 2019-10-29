@@ -24,7 +24,7 @@ class PresentedTextRepository {
     private ArrayList<Phrase> mPhraseList = new ArrayList<>();
     private Context mContext = null;
 
-    enum PhraseSetType { TWEET, MACKENZIE100, MACKENZIE2, ENRON_MOBILE }
+    enum PhraseSetType { TWEET, MACKENZIE100, MACKENZIE2, ENRON_MOBILE, PREVIEW }
 
     private class Phrase {
         PhraseSetType mType;
@@ -74,6 +74,12 @@ class PresentedTextRepository {
             "i found a coke bottle with your name on it"
     };
 
+    private static String[] mPreviewPhraseSet = {
+            "please call me tomorrow if possible",
+            "do you need it today",
+            "this looks fine"
+    };
+
     private PresentedTextRepository(Context context)
     {
         mContext = context;
@@ -118,6 +124,10 @@ class PresentedTextRepository {
                     }
                 }
             }
+        }
+
+        for(String phrase : mPreviewPhraseSet ){
+            mPhraseList.add(new Phrase(phrase.toLowerCase(), PhraseSetType.PREVIEW));
         }
     }
 

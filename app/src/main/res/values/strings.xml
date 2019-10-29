@@ -193,12 +193,14 @@
         <item>MACKENZIE2</item>
         <item>MACKENZIE100</item>
         <item>tweets</item>
+        <item>Preview</item>
     </string-array>
     <string-array name="pref_phrases_file_list_values">
         <item>enron_mobile</item>
         <item>phrases2</item>
         <item>phrases100</item>
         <item>tweets</item>
+        <item>preview</item>
     </string-array>
 
 

@@ -24,6 +24,9 @@ import android.widget.Toast;
 
 import java.util.List;
 
+//import android.util.TypedValue;
+//import android.widget.LinearLayout;
+
 
 /**
  * Created by min90 on 05/12/2016.
@@ -45,8 +48,10 @@ public class CustomKeyboardFragment extends Fragment implements QwertyView.OnQwe
     private DisplayMode mCharDisplayMethod = DisplayMode.DECODED;
     private QwertyInput mQwertyInput;
     private boolean mEnableBackKey;
-    private TextView[] mSuggestionTextViews = new TextView[4];
     private boolean mEnableSuggestionBar;
+    //private TextView[] updateTranscribedTextView = new TextView[4];
+    //private LinearLayout mSuggestionBar;
+    //private TextView mPresentedText;
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
@@ -140,6 +145,7 @@ public class CustomKeyboardFragment extends Fragment implements QwertyView.OnQwe
 
         mPresentedTextDisplay = new CompositePresentedTextDisplay();
         mPresentedTextDisplay.add(new LocalPresentedTextDisplay((TextView) v.findViewById(R.id.presented_text)));
+//        mPresentedText = (TextView) v.findViewById(R.id.presented_text);
         mPresentedTextDisplay.add(new RemotePresentedTextDisplay(getContext()));
 
         mTranscribedTextView = new TranscribedTextView((TextView) v.findViewById(R.id.transcribed_text), this);
@@ -170,6 +176,8 @@ public class CustomKeyboardFragment extends Fragment implements QwertyView.OnQwe
 
         mQwertyInput = new QwertyInput(getContext());
 
+        /*
+        mSuggestionBar = (LinearLayout) v.findViewById(R.id.suggestions_layout);
         mSuggestionTextViews[0] = (TextView) v.findViewById(R.id.suggestions1);
         mSuggestionTextViews[1] = (TextView) v.findViewById(R.id.suggestions2);
         mSuggestionTextViews[2] = (TextView) v.findViewById(R.id.suggestions3);
@@ -177,6 +185,7 @@ public class CustomKeyboardFragment extends Fragment implements QwertyView.OnQwe
         for (TextView suggestionTextView : mSuggestionTextViews) {
             suggestionTextView.setOnTouchListener(this);
         }
+        */
 
         return v;
     }
@@ -200,6 +209,8 @@ public class CustomKeyboardFragment extends Fragment implements QwertyView.OnQwe
             mPhraseList = presentedTextRepository.getPhraseList(PresentedTextRepository.PhraseSetType.MACKENZIE2, -1, true);
         else if (phrases_set.compareTo("enrone_mobie") == 0)
             mPhraseList = presentedTextRepository.getPhraseList(PresentedTextRepository.PhraseSetType.ENRON_MOBILE, -1, true);
+        else if (phrases_set.compareTo("preview") == 0)
+            mPhraseList = presentedTextRepository.getPhraseList(PresentedTextRepository.PhraseSetType.PREVIEW, -1, false);
         else
             mPhraseList = presentedTextRepository.getPhraseList(PresentedTextRepository.PhraseSetType.ENRON_MOBILE, -1, true);
 
@@ -219,15 +230,31 @@ public class CustomKeyboardFragment extends Fragment implements QwertyView.OnQwe
         mEnableBackKey = mSharedPreferences.getBoolean("method_conf_back_key", true);
         mEnableSuggestionBar = mSharedPreferences.getBoolean("method_conf_suggestion_bar", false);
 
+        /*
         if (mEnableSuggestionBar) {
             for (TextView suggestionTextView : mSuggestionTextViews) {
                 suggestionTextView.setVisibility(View.VISIBLE);
             }
+            mSuggestionBar.setVisibility(View.VISIBLE);
+            ViewGroup.LayoutParams layoutParams = mSuggestionBar.getLayoutParams();
+            final int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 45, getResources().getDisplayMetrics());
+            final int padding_left = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
+            layoutParams.height = height;
+            mPresentedText.setPadding(padding_left, 0, 0, 0);
+            mPresentedText.setLayoutParams(layoutParams);
         } else {
             for (TextView suggestionTextView : mSuggestionTextViews) {
                 suggestionTextView.setVisibility(View.GONE);
             }
+            mSuggestionBar.setVisibility(View.GONE);
+            ViewGroup.LayoutParams layoutParams = mSuggestionBar.getLayoutParams();
+            final int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 65, getResources().getDisplayMetrics());
+            final int padding_left = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30, getResources().getDisplayMetrics());
+            layoutParams.height = height;
+            mPresentedText.setPadding(padding_left, 0, 0, 0);
+            mPresentedText.setLayoutParams(layoutParams);
         }
+        */
 
         mQwertyView.applyPreferences();
         mQwertyInput.initialize(mQwertyView, mQwertyView.getLayout(), dpi);
@@ -245,6 +272,7 @@ public class CustomKeyboardFragment extends Fragment implements QwertyView.OnQwe
     }
 
     private void updateSuggestions() {
+        /*
         WordCorrector.PredictEntry[] words = mQwertyInput.getPredictedWords();
         for (int i = 0; i < mSuggestionTextViews.length; i++) {
             if (i < words.length)
@@ -252,6 +280,7 @@ public class CustomKeyboardFragment extends Fragment implements QwertyView.OnQwe
             else
                 mSuggestionTextViews[i].setText("");
         }
+        */
         //Paint textPaint = mSuggestionTextView.getPaint();
         //Rect bounds = new Rect();
         //textPaint.getTextBounds(suggestions.toString(), 0, suggestions.length(), bounds);

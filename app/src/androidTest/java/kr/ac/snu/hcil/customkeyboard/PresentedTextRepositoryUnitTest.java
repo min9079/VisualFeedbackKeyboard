@@ -58,4 +58,16 @@ public class PresentedTextRepositoryUnitTest {
         assertEquals("are you going to join us for lunch", phraseList.get(0));
         assertEquals("how are you", phraseList.get(3));
     }
+
+    @Test
+    public void getPhraseListForPreview() throws Exception {
+        PresentedTextRepository presentedTextRepository = PresentedTextRepository.getInstance(appContext);
+        List<String> phraseList = presentedTextRepository.getPhraseList(PresentedTextRepository.PhraseSetType.PREVIEW, -1, false);
+
+        assertEquals(3, phraseList.size());
+        assertEquals("please call me tomorrow if possible", phraseList.get(0));
+        assertEquals("do you need it today", phraseList.get(1));
+        assertEquals("this looks fine", phraseList.get(2));
+
+    }
 }

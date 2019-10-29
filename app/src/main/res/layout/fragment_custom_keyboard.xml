@@ -36,112 +36,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_weight="0.77"
             android:orientation="vertical"
             android:paddingBottom="0dp"
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
-            android:paddingTop="0dp">
+            android:paddingTop="0dp"
+            android:layout_weight="0.77">
 
             <TextView
                 android:id="@+id/presented_text"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="65dp"
                 android:layout_above="@+id/transcribed_text"
                 android:background="@android:color/darker_gray"
-                android:gravity="center_vertical"
+                android:paddingBottom="0dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0dp"
                 android:maxLines="3"
-                android:paddingBottom="0dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="0dp"
-                android:paddingTop="0dp"
                 android:scrollbars="vertical"
+                android:gravity="center_vertical"
                 android:text="presented text" />
-
-            <LinearLayout
-                android:id="@+id/suggestions_layout"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:orientation="horizontal"
-                android:paddingBottom="0dp"
-                android:paddingLeft="0dp"
-                android:paddingRight="0dp"
-                android:paddingTop="0dp"
-                android:weightSum="1">
-
-                <TextView
-                    android:id="@+id/suggestions1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/grey"
-                    android:gravity="left|center"
-                    android:maxLines="2"
-                    android:paddingBottom="0dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="0dp"
-                    android:scrollHorizontally="false"
-                    android:text="suggestions"
-                    android:textColor="?android:attr/colorPressedHighlight"
-                    android:textSize="18sp"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:id="@+id/suggestions2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/grey"
-                    android:gravity="left|center"
-                    android:maxLines="2"
-                    android:paddingBottom="0dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="0dp"
-                    android:scrollHorizontally="false"
-                    android:text="suggestions"
-                    android:textColor="?android:attr/colorPressedHighlight"
-                    android:textSize="18sp"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:id="@+id/suggestions3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/grey"
-                    android:gravity="left|center"
-                    android:maxLines="2"
-                    android:paddingBottom="0dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="0dp"
-                    android:scrollHorizontally="false"
-                    android:text="suggestions"
-                    android:textColor="?android:attr/colorPressedHighlight"
-                    android:textSize="18sp"
-                    android:visibility="visible" />
-
-                <TextView
-                    android:id="@+id/suggestions4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/grey"
-                    android:gravity="left|center"
-                    android:maxLines="2"
-                    android:paddingBottom="0dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="0dp"
-                    android:scrollHorizontally="false"
-                    android:text="suggestions"
-                    android:textColor="?android:attr/colorPressedHighlight"
-                    android:textSize="18sp"
-                    android:visibility="visible" />
-            </LinearLayout>
-
 
             <TextView
                 android:id="@+id/transcribed_text"
@@ -149,14 +64,14 @@
                 android:layout_height="35dp"
                 android:layout_alignParentBottom="true"
                 android:background="@android:color/background_light"
-                android:gravity="left|top"
-                android:maxLines="2"
                 android:paddingBottom="0dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="0dp"
                 android:paddingTop="0dp"
+                android:maxLines="2"
                 android:scrollHorizontally="true"
-                android:text="transcribed text" />
+                android:gravity="left|top"
+                android:text="transcribed text"/>
         </LinearLayout>
 
         <Button
@@ -171,15 +86,16 @@
             android:text=">" />
     </LinearLayout>
 
-    <kr.ac.snu.hcil.customkeyboard.QwertyView xmlns:android="http://schemas.android.com/apk/res/android"
+    <kr.ac.snu.hcil.customkeyboard.QwertyView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/qwerty_view"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
-        android:background="@android:color/darker_gray"
         android:paddingBottom="8dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingTop="5dp" />
+        android:paddingTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/darker_gray" />
 
 </RelativeLayout>
