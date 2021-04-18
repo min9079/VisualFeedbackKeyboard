@@ -54,6 +54,7 @@ public class WordSuggestionTest {
                 .build());
         PresentedTextRepository presentedTextRepository = PresentedTextRepository.getInstance(appContext);
         phraseList = presentedTextRepository.getPhraseList(PresentedTextRepository.PhraseSetType.MACKENZIE2, -1, false);
+        //phraseList = presentedTextRepository.getPhraseList(PresentedTextRepository.PhraseSetType.ENRON_MOBILE, -1, false);
 
         m_startTime = System.nanoTime();
     }
@@ -64,6 +65,14 @@ public class WordSuggestionTest {
         assertEquals("elections bring out the best", phraseList.get(7));
         assertEquals(500, phraseList.size());
         Log.d(TAG, "size of MACKENZIE2:" + phraseList.size());
+    }
+
+    @Test
+    public void checkPhraseListForEnronMoile() throws Exception {
+        assertEquals("are you going to join us for lunch", phraseList.get(0));
+        assertEquals("please call tomorrow if possible", phraseList.get(4));
+        assertEquals(163, phraseList.size());
+        Log.d(TAG, "size of ENRON_MOBILE:" + phraseList.size());
     }
 
     private int isHit(String targetWord, WordCorrector.PredictEntry[] predictedWords, int k) {
@@ -336,6 +345,7 @@ public class WordSuggestionTest {
         Log.d(TAG, "Total words: " + m_totalWords);
         Log.d(TAG, "Total no hit: " + m_totalNoHit);
         Log.d(TAG, "Total duration (ms): " + (m_finishTime - m_startTime)/1000000 );
+        Log.d(TAG, "KS (%) = " + 100 * (1- (double) m_totalKeystrokes / m_totalChars));
     }
 
 }
